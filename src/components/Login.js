@@ -33,8 +33,8 @@ class Login extends Component {
         }
 
         return (
-            <div className="container h-100 mt-5">
-                <div className="row h-100 justify-content-center align-items-center">
+            <div className="container mt-5 border border-dark rounded">
+                <div className="row justify-content-center">
                     <div className="col-8 mt-5 text-center">
                         <form onSubmit={this.handleSubmit}>
                             <h2>Would You Rather</h2>

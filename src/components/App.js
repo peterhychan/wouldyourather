@@ -10,7 +10,6 @@ import Leaderboard from "./Leaderboard"
 import Question from './Question'
 import NotFound from './NotFound';
 import LoadingBar from 'react-redux-loading'
-import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
     componentDidMount() {
