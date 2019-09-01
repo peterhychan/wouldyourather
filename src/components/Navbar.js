@@ -8,7 +8,6 @@ class Navbar extends Component {
         needRedirect: false
     }
 
-
     handleSignout = (e) => {
         e.preventDefault()
         this.props.dispatch(logout())
@@ -24,19 +23,19 @@ class Navbar extends Component {
         return (
             <nav>
                 <div className="nav-wrapper black">
-                    <h6 className="brand-logo center">{this.props.user.name}</h6>
+                    <Link to="/"><h6 className="brand-logo center mt-3">{this.props.user.name}</h6></Link>
                     <ul>
                         <li>
-                            <Link to="/"><i className="material-icons">home</i></Link>
+                            <Link to="/"><i className="material-icons white-text">home</i></Link>
                         </li>
                         <li>
-                            <Link to="/leaderboard"><i className="material-icons">dashboard</i></Link>
+                            <Link to="/leaderboard"><i className="material-icons white-text">list_alt</i></Link>
                         </li>
                         <li>
-                            <Link to="/add"><i className="material-icons">add_to_queue</i></Link>
+                            <Link to="/add"><i className="material-icons white-text">add_circle_outline</i></Link>
                         </li>
                         <div className="right">
-                            <Link to="#" onClick={this.handleSignout}><i className="material-icons">redo</i>Logout</Link>
+                            <Link to="#" onClick={this.handleSignout}><i className="material-icons white-text">time_to_leave</i></Link>
                         </div>
                     </ul>
                 </div>

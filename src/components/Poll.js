@@ -8,7 +8,7 @@ class Poll extends Component {
         return (
             <Link to={`/questions/${id}`}>
                 <span className="black-text">{optionOne.text} OR {optionTwo.text}</span>
-                <i className="material-icons right">send</i>
+                <i className="material-icons right black-text d-none d-md-block">send</i>
             </Link>
         )
     }

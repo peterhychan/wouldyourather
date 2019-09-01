@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {TabContent, TabPane, Jumbotron} from 'reactstrap'
 import {connect} from 'react-redux'
 import Poll from './Poll'
-import classnames from 'classnames';
 import {Link} from 'react-router-dom';
 
 class Dashboard extends Component {
@@ -21,29 +20,23 @@ class Dashboard extends Component {
     render() {
         const {unAnswered, answered} = this.props
         return (
-            <div className="container center" style={{marginTop: 50}}>
+            <div className="container center mt-3">
                         <Jumbotron>
-                          <h1>Would You Rather Application</h1>
+                          <h1>Would You Rather ?</h1>
                           <p>
-                            This is a simple React-Redux application.
+                            Managed by React and Redux
                           </p>
                           <p>
-                            <Link to="/add"><button className="btn black white-text">Ask a Question</button></Link>
+                            <Link to="/add"><button className="btn btn-dark">Ask a Question</button></Link>
                           </p>
                         </Jumbotron>   
 
-                        <button
-                            className={classnames({active: this.state.activeTab === '1'})}
-                            onClick={() => { this.display('1')}}
-                        >
-                            Unanswered
-                        </button>
-                        <button
-                            className={classnames({active: this.state.activeTab !== '1'})}
-                            onClick={() => { this.display('0')}}
-                        >
-                            Answered
-                        </button>
+                        <span onClick={() => { this.display('1')}}>
+                            <button className="btn btn-outline-dark">Unanswered</button>
+                        </span>
+                        <span onClick={() => { this.display('0')}}>
+                            <button className="btn btn-outline-dark">Answered</button>
+                        </span>
                 <hr />
                 <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
@@ -53,7 +46,7 @@ class Dashboard extends Component {
                                 <li className="collection-item" key={res}><Poll id={res}/>
                                 </li>
                             ))}
-                            {unAnswered.length ===0 ? <li className="flow-text ">Ask a Question ! <Link to="/add" className="secondary-content"><i className="material-icons">exposure_plus_1</i></Link></li>: <li></li>}
+                            {unAnswered.length ===0 ? <li className="flow-text">Ask a Question ! <Link to="/add"><i className="material-icons">add</i></Link></li>: <li></li>}
                         </ul>
                     </TabPane>
                     <TabPane tabId="0">

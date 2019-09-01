@@ -28,14 +28,15 @@ class NewQuestion extends Component {
 
     render() {
         return (
-            <div className="container center" style={{marginTop: 50, width:600}}>
+            <div className="container text-center col-lg-6 offset-lg-3 col-sm-12 col-md-12" style={{marginTop: 50}}>
                 <h1>Would You Rather...</h1>
                 <form onSubmit={this.handleSubmit}>
                         <div className="input-field col s12">
-                        <textarea
-                            className="materialize-textarea"                        
-                            id="optionOne"
-                            onChange={this.handleChange}/>
+                            <textarea
+                                className="materialize-textarea"                        
+                                id="optionOne"
+                                onChange={this.handleChange}
+                            />
                             <label htmlFor="optionOne">Option One</label>
                         </div>
                         <h2>OR</h2>
@@ -43,12 +44,13 @@ class NewQuestion extends Component {
                             <textarea
                                 className="materialize-textarea"
                                 id="optionTwo"
-                                onChange={this.handleChange}/>
-                                <label htmlFor="optionTwo">Option Two</label>
+                                onChange={this.handleChange}
+                            />
+                            <label htmlFor="optionTwo">Option Two</label>
                         </div>
                     <br />
                     <button
-                        className="btn black"
+                        className="btn btn-block btn-dark"
                         disabled={this.state.optionOne === '' || this.state.optionTwo === ''}
                     >
                         Submit

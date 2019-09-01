@@ -5,7 +5,6 @@ import Option from "./Option"
 import User from './User'
 import {Link} from 'react-router-dom';
 import NotFound from "./NotFound";
-import {Jumbotron} from 'reactstrap'
 
 class Question extends Component {
     state = {
@@ -19,22 +18,20 @@ class Question extends Component {
     render() {
         const {question} = this.props
         return (
-            <div className="container center" style={{marginTop: 100}}>
+            <div className="container mt-5">
                 {question
                     ?
-                    (<Jumbotron>
+                    (<div className="text-center col-lg-6 offset-lg-3 col-sm-12 col-md-12">
                         <div style={{display: 'none'}}><User id={question.author} /></div>
                         <div>
                             <i className="material-icons large">how_to_vote</i>
-                            <h1>Would You Rather</h1>
-                            <br/>
+                            <h1 className="m-4">Would You Rather</h1>
                             <Option questionId={question.id} optionName="optionOne" onClick={this.handleVote}/>
-                            <h2>OR</h2>
+                            <h2 className="m-4">OR</h2>
                             <Option questionId={question.id} optionName="optionTwo" onClick={this.handleVote}/>
                         </div>
-                        <br/>
-                        <Link to="/"><i className="material-icons medium black-text">keyboard_backspace</i></Link>
-                    </Jumbotron>)
+                        <Link to="/"><i className="material-icons medium black-text m-4">keyboard_backspace</i></Link>
+                    </div>)
                     : <NotFound/>}
             </div>
         )

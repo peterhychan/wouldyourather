@@ -10,11 +10,11 @@ class Option extends Component {
         const {option, showResults, percentage} = this.props
         return (
             !showResults ?
-                <button to="#" onClick={this.handleClick}>
+                <button className="btn btn-outline-dark btn-block" to="#" onClick={this.handleClick}>
                     <div>
-                        <h3>{option.text}</h3>
+                        <p>{option.text}</p>
                         {showResults === true &&
-                        (<h4>#Votes: {option.votes.length} ({percentage}%)</h4>)
+                        (<p>#Votes: {option.votes.length} ({percentage}%)</p>)
                         }
                     </div>
                 </button>
@@ -22,7 +22,7 @@ class Option extends Component {
                 <div>
                     <h3>{option.text}</h3>
                     {showResults &&
-                        (<div className="badge blue"># Votes : {option.votes.length} <div className="badge red">({percentage}%)</div></div>)
+                        (<div className="btn btn-secondary"># Votes : {option.votes.length} <span className="badge badge-light">({percentage}%)</span></div>)
                     }
                 </div>
         )

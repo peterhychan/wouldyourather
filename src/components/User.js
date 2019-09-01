@@ -7,15 +7,14 @@ class User extends Component {
         const totalScore = user.questions.length + Object.keys(user.answers).length;
         
         return (
-          <div className="card small">
+          <div className="card">
             <div className="card-content">
-                <img src={user.avatarURL} alt={user.avatarURL} style={{ width: 120, height: 120, borderRadius: 40}}/>
-                <hr />
-                <span className="card-title activator grey-text text-darken-4">{user.name}<i className="material-icons right">more_vert</i></span>
+                <img src={user.avatarURL} alt={user.avatarURL} style={{ width: 50, height: 50, borderRadius: 20}}/>
+                <h4 className="card-title activator">{user.name}<i className="material-icons right">more_vert</i></h4>
                 <h5>Total Score : {totalScore}</h5>
             </div>
             <div className="card-reveal">
-                <span className="card-title activator grey-text text-darken-4">{user.name}<i className="material-icons right">more_vert</i></span>
+                <h4 className="card-title activator">{user.name}<i className="material-icons right">more_vert</i></h4>
                 <h5>Total Score : {totalScore}</h5>
                 <h5 id="asked">Asked : {user.questions.length}</h5>
                 <h5 id="answered">Answered: {Object.keys(user.answers).length}</h5>       

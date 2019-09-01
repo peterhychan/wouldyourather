@@ -6,12 +6,13 @@ import User from './User'
 class Leaderboard extends Component {
     render() {
         return (
-            <div className="container center" style={{marginTop: 50, width: 500}}>
-                <h1>Leaderboard</h1>
-                <hr />
-                {this.props.users.map(res =>
-                    <User key={res} id={res} />
-                )}
+            <div className="container col-6 text-center">
+                <h1 className="mt-4 mb-3">Leaderboard</h1>
+                <div>
+                    {this.props.users.map(res =>
+                        <User key={res} id={res} />
+                    )}
+                </div>
             </div>
         )
     }
