@@ -1,6 +1,8 @@
 # Would-You-Rather App
 It is a React-Redux application which records questions and responses by default users. 
 
+The live demo is [HERE](https://peterhychan.github.io/wouldyourather/).
+
 ## Tech Stacks
 1. ReactJS
 2. Redux
