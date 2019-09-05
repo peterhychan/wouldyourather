@@ -3,6 +3,8 @@ It is a React-Redux application which records questions and responses by default
 
 A Video demonstration is [HERE](https://youtu.be/cRJgxwL-Kvk)
 
+The application is deployed on [GitHub Page](https://peterhychan.github.io/wouldyourather/)
+
 ## Tech Stacks
 1. ReactJS
 2. Redux
