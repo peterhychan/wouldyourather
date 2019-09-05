@@ -1,6 +1,8 @@
 # Would-You-Rather App
 It is a React-Redux application which records questions and responses by default users. 
 
+A Video demonstration is [HERE](https://youtu.be/cRJgxwL-Kvk)
+
 ## Tech Stacks
 1. ReactJS
 2. Redux
