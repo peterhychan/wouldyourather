@@ -1,6 +1,9 @@
 # Would-You-Rather App
 It is a React-Redux application which records questions and responses by default users. 
 
+![would-you-rather](https://upload.cc/i1/2019/09/05/sVSbMd.png)
+
+
 A Video demonstration is [HERE](https://youtu.be/cRJgxwL-Kvk)
 
 The application is deployed on [GitHub Page](https://peterhychan.github.io/wouldyourather/)
